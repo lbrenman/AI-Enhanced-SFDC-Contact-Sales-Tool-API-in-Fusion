@@ -11,4 +11,4 @@ Enhanced contact API created in Amplify Fusion that demonstrates how to leverage
 ![Imgur](https://i.imgur.com/5lso8e6.png)
 ![Imgur](https://i.imgur.com/iDNnZAf.png)
 ![Imgur](https://i.imgur.com/VeeeD5S.png)
-![Imgur](https://i.imgur.com/Q7hN7GF.png)
+![Imgur](https://i.imgur.com/Q7hN7GF.png) 
