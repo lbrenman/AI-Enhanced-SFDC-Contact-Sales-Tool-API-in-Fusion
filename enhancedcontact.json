@@ -1,0 +1,179 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0",
+      "title": "enhancedcontact",
+      "description": "AI Enhanced SFDC Contact",
+      "termsOfService": "https://github.com/lbrenman",
+      "contact": {
+        "name": "Leor Brenman",
+        "url": "https://github.com/lbrenman",
+        "email": "lbrenman99@hotmail.com"
+      },
+      "license": {
+        "url": "https://github.com/lbrenman",
+        "name": "N/A"
+      }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000"
+      }
+    ],
+    "paths": {
+      "/sfdccontact": {
+        "get": {
+          "tags": [
+            "enhancedcontact"
+          ],
+          "summary": "Get All Contacts",
+          "description": "Retrieve a list of all contacts.",
+          "operationId": "get-all-contacts",
+          "responses": {
+            "200": {
+              "description": "List of Contacts",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getContactsResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/sfdccontact/{sfdccontactid}": {
+        "get": {
+          "tags": [
+            "enhancedcontact"
+          ],
+          "summary": "Get Enhanced Contact By Contact ID",
+          "description": "Retrieve the information of the contact with the matching contact ID.",
+          "operationId": "get-contact-contactId",
+          "parameters": [
+            {
+              "name": "sfdccontactid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "User Found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/sfdc-enhanced-contact-response"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "User Not Found"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      {
+        "name": "enhancedcontact"
+      }
+    ],
+    "components": {
+      "schemas": {
+        "getContactsResponse": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "company": {
+                "type": "string"
+              },
+              "industry": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "sfdc-enhanced-contact-response": {
+          "type": "object",
+          "properties": {
+            "contact": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "company": {
+                  "type": "string"
+                },
+                "industry": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                }
+              }
+            },
+            "insights": {
+              "type": "object",
+              "properties": {
+                "personalized_outreach": {
+                  "type": "string"
+                },
+                "industry_summary": {
+                  "type": "string"
+                },
+                "talking_points": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "sentiment_score": {
+                  "type": "number"
+                },
+                "churn_risk": {
+                  "type": "string"
+                }
+              }
+            },
+            "recommendations": {
+              "type": "object",
+              "properties": {
+                "next_steps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
