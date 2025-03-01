@@ -6,7 +6,7 @@ Enhanced contact API created in Amplify Fusion that demonstrates how to leverage
 
 * You can read more about how the prompt was engineered as well as the details of the OpenAI API call and response [here](https://gist.github.com/lbrenman/67ee78c716210448cb2605c8f5d6b2b7).
 * The Open API Specification used to create the API in Fusion is in this repo in the file `enhancedcontact.json` [here](https://github.com/lbrenman/AI-Enhanced-SFDC-Contact-Sales-Tool-API-in-Fusion/blob/master/enhancedcontact.json).
-* You can see the use case in action in a Nodejs Web app [here](https://github.com/lbrenman/enhanced-contact-nodejs-web-app)
+* You can see the API in action in a Nodejs Web app [here](https://github.com/lbrenman/enhanced-contact-nodejs-web-app)
 * Some screen shots from the Fusion project are shown below:
 ![Imgur](https://i.imgur.com/5lso8e6.png)
 ![Imgur](https://i.imgur.com/iDNnZAf.png)
